@@ -1,16 +1,15 @@
 import {
   Box,
-  Link,
   List,
   ListItem,
   ListItemButton,
   ListItemText,
   Typography,
 } from "@mui/material";
-import { Link as RouterLink } from "react-router-dom";
 
 import { navItems } from "src/shared/navigation";
 import { boxStyles, drawerStyle } from "./styles";
+import NavLink from "src/components/NavLink";
 
 interface Props {
   handleDrawerToggle: () => void;
@@ -26,14 +25,9 @@ function Drawer({ handleDrawerToggle }: Props) {
         {navItems.map((item) => (
           <ListItem key={item} disablePadding>
             <ListItemButton sx={boxStyles}>
-              <Link
-                to={`/${item === "Home" ? "" : item.toLowerCase()}`}
-                key={item}
-                sx={{ color: "white" }}
-                component={RouterLink}
-              >
+              <NavLink item={item}>
                 <ListItemText primary={item} />
-              </Link>
+              </NavLink>
             </ListItemButton>
           </ListItem>
         ))}

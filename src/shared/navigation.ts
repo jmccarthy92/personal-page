@@ -1,1 +1,1 @@
-export const navItems = Object.freeze(["Home", "About", "Sophia"]);
+export const navItems = Object.freeze(["Home", "About", "Resume"]);

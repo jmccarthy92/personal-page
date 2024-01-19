@@ -4,12 +4,10 @@ import {
   Button,
   Drawer,
   IconButton,
-  Link,
   ThemeProvider,
   Toolbar,
   Typography,
 } from "@mui/material";
-import { Link as RouterLink } from "react-router-dom";
 import MenuIcon from "@mui/icons-material/Menu";
 import { navItems } from "src/shared/navigation";
 import DrawerContent from "src/components/Drawer";
@@ -22,6 +20,7 @@ import {
   logoStyle,
   mobileStyle,
 } from "./styles";
+import NavLink from "src/components/NavLink";
 
 interface Props {
   window?: () => Window;
@@ -57,14 +56,7 @@ function NavBar({ window }: Props) {
             <Box sx={mobileStyle}>
               {navItems.map((item) => (
                 <Button key={item}>
-                  <Link
-                    to={`/${item === "Home" ? "" : item.toLowerCase()}`}
-                    key={item}
-                    sx={{ color: "white" }}
-                    component={RouterLink}
-                  >
-                    {item}
-                  </Link>
+                  <NavLink item={item}>{item}</NavLink>
                 </Button>
               ))}
             </Box>
