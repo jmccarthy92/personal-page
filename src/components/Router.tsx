@@ -27,6 +27,10 @@ export default createHashRouter([
         path: "about",
         element: <About />,
       },
+      {
+        path: "sophia",
+        element: <p>it says under construction that's cool!</p>,
+      },
     ],
   },
 ]);
