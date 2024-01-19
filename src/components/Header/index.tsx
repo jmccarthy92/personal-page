@@ -1,8 +1,7 @@
-import reactLogo from "./assets/react.svg";
+import reactLogo from "src/assets/react.svg";
 import viteLogo from "/vite.svg";
-import "./App.css";
 
-function App() {
+function Header() {
   return (
     <>
       <div>
@@ -14,13 +13,8 @@ function App() {
         </a>
       </div>
       <h1>James McCarthy</h1>
-      <div className="card">
-        <p>
-          Page under construction. <br />
-        </p>
-      </div>
     </>
   );
 }
 
-export default App;
+export default Header;
