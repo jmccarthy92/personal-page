@@ -7,7 +7,6 @@ import Header from "src/components/Header";
 function NavBarWrapper() {
   return (
     <>
-      <Header />
       <NavBar />
       <Outlet />
     </>

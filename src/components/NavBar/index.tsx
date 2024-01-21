@@ -1,5 +1,6 @@
 import {
   AppBar,
+  Avatar,
   Box,
   Button,
   Drawer,
@@ -11,6 +12,7 @@ import {
 import MenuIcon from "@mui/icons-material/Menu";
 import { navItems } from "src/shared/navigation";
 import DrawerContent from "src/components/Drawer";
+import profilePicture from "/profile-pic.jpg";
 import { useState } from "react";
 import {
   boxStyles,
@@ -49,6 +51,9 @@ function NavBar({ window }: Props) {
               sx={iconStyle}
             >
               <MenuIcon />
+            </IconButton>
+            <IconButton sx={{ p: 1 }}>
+              <Avatar alt="picture" src={profilePicture} />
             </IconButton>
             <Typography variant="h6" component="div" sx={logoStyle}>
               James McCarthy

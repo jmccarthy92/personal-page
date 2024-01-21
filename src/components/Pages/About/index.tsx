@@ -1,22 +1,55 @@
+import { Avatar } from "@mui/material";
 import "src/App.css";
+import profilePicture from "/profile-pic.jpg";
+import Badges from "src/components/Badge";
+import { BADGES } from "src/components/Badge/types";
+
+const badges = [
+  BADGES.linkedIn,
+  BADGES.github,
+  BADGES.email,
+  BADGES.resume,
+  BADGES.schedule,
+];
 
 function About() {
   return (
-    <>
+    <div
+      className="card"
+      style={{
+        marginTop: "3rem",
+      }}
+    >
+      <Avatar
+        sx={{ width: 250, height: 250, margin: "auto" }}
+        alt="Profile Picture"
+        src={profilePicture}
+      />
       <p>
-        Hi, I'm James and I'm a software engineer from Queens, New York. I
-        currently work full-time as a Lead Backend Engineer @ BRKFST.IO . I
-        primarily use TypeScript as my main language for creating solutions. I
-        mostly build apps for the web, but also enjoy programming on all
-        platforms. I focus on providing simplicity for both users and
-        developers. In the words of Robert C. Martin, “It is not the language
-        that makes programs appear simple. It is the programmer that makes the
-        language appear simple!”. I've been writing code for over 7 years and
-        I'm still learning every day. I still have the same passion for growing
-        and learning as I did when I first embarked on this path. I love to
-        share my passion and knowledge so feel free to connect with me.
+        Greetings, I'm James, a dedicated software engineer based in Queens, New
+        York, currently serving as a Lead Backend Engineer at BRKFST.IO. My
+        proficiency lies in leveraging TypeScript to craft innovative solutions.
+        While my primary focus is on web application development, I find joy in
+        programming across diverse platforms. My approach centers on delivering
+        simplicity, striving to create user-friendly experiences while
+        facilitating developer efficiency.
+        <br />
+        <br />
+        Embracing the wisdom of Robert C. Martin, I believe, "It is not the
+        language that makes programs appear simple. It is the programmer that
+        makes the language appear simple!" With over 7 years of coding
+        experience, I remain committed to continuous learning, maintaining the
+        same fervor for growth and exploration since the inception of my coding
+        journey.
+        <br />
+        <br />
+        I'm passionate about sharing my knowledge and enthusiasm, so feel free
+        to connect with me if you're eager to join the conversation or explore
+        new horizons together.
       </p>
-    </>
+      <h4>Contact:</h4>
+      <Badges badges={badges} />
+    </div>
   );
 }
 
