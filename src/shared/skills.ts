@@ -1,0 +1,27 @@
+import { Skill } from "src/components/SkillIcons/types";
+
+export const SKILLS: Skill[] = [
+  "TypeScript",
+  "React-Dark",
+  "Redux",
+  "Vite-Dark",
+  "NodeJS-Dark",
+  "NestJS-Dark",
+  "ExpressJS-Dark",
+  "MongoDB",
+  "HTML",
+  "CSS",
+  "Azure-Dark",
+  "Terraform-Dark",
+  "Docker",
+  "PostgreSQL-Dark",
+  "Git",
+  "Github-Dark",
+  "GithubActions-Dark",
+  "Java-Dark",
+  "Maven-Dark",
+  "Python-Dark",
+  "Linux-Dark",
+  "VSCode-Dark",
+  "Figma-Dark",
+];

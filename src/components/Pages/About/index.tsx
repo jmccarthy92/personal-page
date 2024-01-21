@@ -2,15 +2,7 @@ import { Avatar } from "@mui/material";
 import "src/App.css";
 import profilePicture from "/profile-pic.jpg";
 import Badges from "src/components/Badge";
-import { BADGES } from "src/components/Badge/types";
-
-const badges = [
-  BADGES.linkedIn,
-  BADGES.github,
-  BADGES.email,
-  BADGES.resume,
-  BADGES.schedule,
-];
+import { BADGES } from "src/shared/badges";
 
 function About() {
   return (
@@ -48,7 +40,7 @@ function About() {
         new horizons together.
       </p>
       <h4>Contact:</h4>
-      <Badges badges={badges} />
+      <Badges badges={BADGES} />
     </div>
   );
 }

@@ -1,12 +1,12 @@
-import { Badge } from "./types";
+import { BadgesProps, BadgeProps } from "./types";
 
 const BADGE_URL = "https://custom-icon-badges.demolab.com/badge/-";
 
-function Badges({ badges }: { badges: Badge[] }) {
+function Badges({ badges }: BadgesProps) {
   return badges.map((badge) => <Badge badge={badge} />);
 }
 
-function Badge({ badge }: { badge: Badge }) {
+function Badge({ badge }: BadgeProps) {
   return (
     <code>
       <a href={badge.url} target="_blank">

@@ -37,3 +37,11 @@ export interface Badge {
   color: string;
   url: string;
 }
+
+export interface BadgeProps {
+  badge: Badge;
+}
+
+export interface BadgesProps {
+  badges: Badge[];
+}
