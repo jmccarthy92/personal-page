@@ -5,6 +5,9 @@ import {
   Button,
   Drawer,
   IconButton,
+  ListItem,
+  ListItemButton,
+  ListItemText,
   ThemeProvider,
   Toolbar,
   Typography,
@@ -60,8 +63,8 @@ function NavBar({ window }: Props) {
             </Typography>
             <Box sx={mobileStyle}>
               {navItems.map((item) => (
-                <Button key={item}>
-                  <NavLink item={item}>{item}</NavLink>
+                <Button key={item.name}>
+                  <NavLink item={item}>{item.name}</NavLink>
                 </Button>
               ))}
             </Box>
@@ -79,7 +82,17 @@ function NavBar({ window }: Props) {
             }}
             sx={drawerStyle}
           >
-            <DrawerContent handleDrawerToggle={handleDrawerToggle} />
+            <DrawerContent handleDrawerToggle={handleDrawerToggle}>
+              {navItems.map((item) => (
+                <ListItem key={item.name} disablePadding>
+                  <ListItemButton sx={boxStyles}>
+                    <NavLink item={item}>
+                      <ListItemText primary={item.name} />
+                    </NavLink>
+                  </ListItemButton>
+                </ListItem>
+              ))}
+            </DrawerContent>
           </Drawer>
         </nav>
       </Box>

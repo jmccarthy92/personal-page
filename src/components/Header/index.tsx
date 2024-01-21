@@ -5,7 +5,7 @@ function Header() {
     <div style={{ fontSize: "4rem" }}>
       <Typewriter
         options={{
-          strings: ["Hi, I'm James.", "I'm a Software Engineer."],
+          strings: ["Hi, I'm James.", "Welcome to my portfolio!"],
           autoStart: true,
           loop: true,
         }}

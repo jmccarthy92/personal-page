@@ -13,25 +13,16 @@ import NavLink from "src/components/NavLink";
 
 interface Props {
   handleDrawerToggle: () => void;
+  children?: React.ReactNode;
 }
 
-function Drawer({ handleDrawerToggle }: Props) {
+function Drawer({ handleDrawerToggle, children }: Props) {
   return (
     <Box sx={boxStyles} onClick={handleDrawerToggle}>
       <Typography variant="h6" sx={drawerStyle}>
         James McCarthy
       </Typography>
-      <List>
-        {navItems.map((item) => (
-          <ListItem key={item} disablePadding>
-            <ListItemButton sx={boxStyles}>
-              <NavLink item={item}>
-                <ListItemText primary={item} />
-              </NavLink>
-            </ListItemButton>
-          </ListItem>
-        ))}
-      </List>
+      <List>{children}</List>
     </Box>
   );
 }
