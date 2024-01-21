@@ -1,15 +1,6 @@
-import {
-  Box,
-  List,
-  ListItem,
-  ListItemButton,
-  ListItemText,
-  Typography,
-} from "@mui/material";
+import { Box, List, Typography } from "@mui/material";
 
-import { navItems } from "src/shared/navigation";
 import { boxStyles, drawerStyle } from "./styles";
-import NavLink from "src/components/NavLink";
 
 interface Props {
   handleDrawerToggle: () => void;
